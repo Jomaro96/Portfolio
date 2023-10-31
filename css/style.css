@@ -1,0 +1,35 @@
+#container{
+  
+    height: 600px;
+    padding-left: 3%;
+    display: flex;
+    border: 5px solid red;
+}
+
+#box1{
+border-top: 5px solid #254e70;
+border-bottom: 5px solid #254e70;
+border-left: 5px solid #254e70;
+border-right: 1px solid black;
+width: 35%;
+display: grid;
+align-items: center;
+}
+
+#box2{
+    border-top: 5px solid #254e70;
+    border-bottom: 5px solid #254e70;
+    border-right: 5px solid #254e70;
+    width: 60%;
+    text-align: center;
+    
+}
+
+.child_container{
+    margin-top: 10%;
+    height: 400px;
+}
+
+h2{
+    text-align: center;
+}
