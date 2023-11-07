@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    $("#user_login").submit(function(){
-       // e.preventDefault();
+    $("#user_login").submit(function(e){
+         e.preventDefault();
 
         //Define Values
         /*var usuario = {
@@ -15,6 +15,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             url: $(this).attr("action"),
+            dataType: 'json',
             data: {
                 email: email,
                 pwd: pwd
@@ -23,14 +24,32 @@ $(document).ready(function(){
                 console.log("Enviando usuario");
             },
             success: function(response) {
-                console.log(response);
+                //console.log(response);
             },
             error: function (){
                 console.log("Error");
             },
             
+        }).done(function(response){
+
+            console.log(response);
+            if(!response.error){
+                alert("Welcome");
+                window.location.href = "main.php";
+            }
+            else{
+                alert("Error");
+            }
+        }).fail(function(response){
+
+            console.log(response.responseText);
+
+        }).always(function(){
+
+            console.log("complete");
+
         });
         //return false;
-    });
+    })
 
 });
