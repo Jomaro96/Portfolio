@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Projects</h2>
+    <ul>
+        <li *ngFor="let project of projects" class="project">
+            <a [routerLink]="['/project', project._id]">
+            <div class="maskimg">
+            <img src="{{url+'get-image/'+project.image}}" *ngIf="project.image">
+            </div>
+            </a>
+            <h3>{{project.name}}</h3>
+            <p>{{project.category}}</p>
+        
+        </li>
+    </ul>
+    <div class="copyright">
+    <p>Copyright Notice: Some of these projects contain their own copyright for their respective owners, Im only acknowledging that I have worked on these and by no means im trying to gain profit by showcasing them.</p>
+    </div>
+</div>
+
+

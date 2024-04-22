@@ -1,0 +1,16 @@
+<div class="container">
+    
+    <div class="image-project">
+    <img src="{{url+'get-image/'+project.image}}" *ngIf="project.image">
+    </div>
+    <div class="data-project">
+    <h1>{{project.name}}</h1>
+    <h3>{{project.description}}</h3>
+    <p>{{project.category}}</p>
+    <p>{{project.year}}</p>
+    <p>{{project.langs}}</p>
+            <a  class="button-edit"(click)="updateProject(project._id)">Edit</a>
+            <a  class="button-delete" (click)="deleteProject(project._id)">Delete</a>
+    </div>
+</div>
+

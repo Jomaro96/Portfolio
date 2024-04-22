@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>{{title}}</h2>
+
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+    <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="project.name" required/>
+        <span class = 'verror' *ngIf="name.touched && !name.valid">A name is required</span>
+    </p>
+    <p>
+        <label for="desc">Desc</label>
+        <textarea name="desc" id="desc" #desc="ngModel" [(ngModel)]="project.description" required> </textarea>
+        <span class = 'verror' *ngIf="desc.touched && !desc.valid">A description is required</span>
+    </p>
+    <p>
+        <label for="cat">Category</label>
+        <input type="text" id="cat" name="cat" #cat="ngModel" [(ngModel)]="project.category" required/>
+        <span class = 'verror' *ngIf="cat.touched && !cat.valid">A category is required</span>
+    </p>
+    <p>
+        <label for="langs">Languages</label>
+        <input type="text" id="langs" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/>
+        <span class = 'verror' *ngIf="langs.touched && !langs.valid">A language is required</span>
+    </p>
+    <p>
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year" #year="ngModel" [(ngModel)]="project.year" required/>
+        <span class = 'verror' *ngIf="year.touched && !year.valid">Year is required</span>
+    </p>
+    <p>
+        <label for="img">Image</label>
+        <input type="file" id="img" name="img"  placeholder="subir imagen" (change)="fileChangeEvent($event)"/>
+    </p>
+    <input type="submit" value="Submit" [disabled]="!projectForm.form.valid"/>
+    </form>
+</div>

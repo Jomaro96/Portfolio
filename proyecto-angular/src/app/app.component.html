@@ -1,0 +1,22 @@
+
+<header>
+<ul>
+  <li><a [routerLink]="['/about']" [routerLinkActive]="['actived']">About</a></li>
+  <li><a [routerLink]="['/projects']" [routerLinkActive]="['actived']">Projects</a></li>
+  <li id="logo"><a href="#">OA</a></li>
+  <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']">Create Project</a></li>
+  <li><a [routerLink]="['/contact']" [routerLinkActive]="['actived']">Contact</a></li>
+</ul>
+</header>
+
+
+<section id="content">
+<router-outlet> </router-outlet> <!--Necesario para que las rutas funcionen-->
+
+</section>
+
+
+<footer>
+  Ing. José Omar Almaraz Rodríguez
+</footer>
+
