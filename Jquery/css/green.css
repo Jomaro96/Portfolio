@@ -1,0 +1,22 @@
+body{
+    background: url("../assets/3.jpg"); /*2 puntos para subir*/
+    background-attachment: fixed;
+}
+
+#logo{
+   
+    background-color: #2d9d1e;
+    
+}
+
+#menu ul li:hover{
+    background-color: #2d9d1e;
+}
+
+.button-more{
+  
+ 
+    background-color: #2d9d1e;
+   
+    
+}

@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#global{
+    width: 65%;
+    margin: 0px auto;
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+#logo{
+    font-family: "Verdana", "Arial";
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 385px;
+    height: 80px;
+    float: left;
+    margin-bottom: 20px;
+    line-height: 80px;
+}
+#menu{
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #333;
+ width: 100%;
+ /*text-transform: uppercase;*/
+ margin-bottom: 20px;
+}
+#menu ul
+{
+    line-height: 46px;
+    list-style: none;
+
+}
+#menu ul li {
+    height: 46px;
+    display: inline-block; /*Create horizontal list*/
+    transition: all 300ms
+}
+
+#menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#posts{
+    width: 60%;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.post{
+    padding: 7px;
+}
+h2{
+  font-size: 30px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.post .date {
+  display: block; /*Display block hace que tenga propiedades del div en el que esta*/
+  color:gray;
+  margin-top: 10px; /*Only works with display block*/
+}
+.post p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 17px;
+    text-align: justify;
+}
+
+.button-more{
+    font-size: 14px;
+    text-align: center;
+    display: block; /*Display block hace que tenga propiedades del div en el que esta*/
+    padding: 15px;
+    
+    color: black;
+    text-decoration: none;
+    margin-top: 10px; /*Only works with display block*/
+    margin-bottom: 20px;
+    width: 80px; /*Tamano para que no utilize toda la dimension del div debido al display block*/
+    
+}
+
+#sidebar{
+ font-family: Arial, Helvetica, sans-serif;
+ width: 31%;
+ float: right;
+}
+
+#sidebar h4{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 10px;
+    color: #333;
+}
+#sidebar img{
+    width: 100%;
+}
+#sidebar p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+form{
+    width: 80%;
+}
+form input[type = "text"],
+input[type = "password"],
+input[type = "number"],
+select{
+    padding: 5px;
+    border-radius: 2px;
+    border-color: #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 2px grey;
+}
+form input[type="submit"]{
+    background-color: #eee;
+    padding: 10px;
+    border: solid #ccc 1px;
+    color: #333;
+    cursor: pointer
+}
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(51,51,51,0.70);
+    height: 47px;
+    color:white;
+    margin: 0px auto;
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 47px;
+}
+
+.bx-wrapper, .bx-viewport {
+    height: 300px !important;   
+}
+#selector-theme{
+    position: fixed;
+    top:40%;
+    background: rgb(51, 51, 51, 0.5);
+    width: 50px;
+    height: 100px;
+}
+
+#to-green,
+#to-red,
+#to-blue{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#to-green{
+    background-color: #2d9d1e;
+}
+#to-red{
+    
+    background-color: #c33c54;
+}
+#to-blue{
+    background-color: #331e9d;
+}
+.go-top{
+    color: white;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 40px;
+}
+
+#dropbox{
+    margin-top: 20px;
+}
+#clock{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    border: 5px dashed #333;
+    width: 20%;
+    padding: 30px;
+    margin: 0px auto;
+}
+#form_contact{
+    width: 50%;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#form_contact label{
+ width: 100%;
+ display: block;
+ margin-top: 5px;
+}
+
+.form-error{
+    float: right;
+    font-size: 11px;
+    color: red;
+    padding: 10px;
+    width: 65%;
+}

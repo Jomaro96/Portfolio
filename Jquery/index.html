@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--JQuery-->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"></script>
+  <!--script-->
+  <script type="text/javascript" src="js/main.js"></script>
+
+   <!--default styles-->
+    <link rel="stylesheet" href="css/style.css">
+    <link  id="theme" rel="stylesheet" href="css/red.css">
+  
+   <!--slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   <!--Moment-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+   <!--Validator-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto</title>
+</head>
+<body>
+   <!--theme selector-->
+   <div id="selector-theme">
+    <div id = "to-green"></div>
+    <div id = "to-red"></div>
+    <div id = "to-blue"></div>
+ </div>
+<section id="global"> <!--box that contains everything-->
+ 
+  <!--Header-->
+  <header>
+     <div id="logo">
+          <h1>PROJECT JS</h1>
+     </div>
+     <div class="clearfix">
+
+     </div>
+     <nav id="menu">
+       <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="clock.html">CLOCK</a></li>
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+       </ul>
+     </nav>
+  </header>
+  <!--Slider-->
+  <div id="slider">
+    <div class="bxslider">
+      <div><img src="assets/1.jpg" title="Mountains" /></div>
+      <div><img src="assets/2.jpg" title="River" /></div>
+      <div><img src="assets/3.jpg" title="Beach" /></div>
+    </div>
+  </div>
+  <!--Content-->
+  <div id="content">
+      <div id="posts">
+        <!--Post load from main js-->
+      </div>
+
+      <aside id="sidebar">
+        <div id="about">
+           <h4>Who am i?</h4>
+           <img src="img/me.jpg"/>
+           <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fringilla urna porttitor rhoncus dolor purus.
+          </p>
+        </div>
+        <div id="login">
+            <h4>Login</h4>
+            <form>
+              <label for="user">User:</label>
+              <input type="text" name="user" id="user"/>
+
+              <label for="pass">Password:</label>
+              <input type="password" name="pass" />
+
+              <input type="submit" value="Enter"/>
+            </form>
+        </div>
+      </aside>
+      <div class="clearfix">
+
+      </div>
+  </div>
+</section>
+<footer>
+      Ing Jose Omar Almaraz Webpage &copy;
+
+      <a href="#" class="go-top">Back to Top</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body{
+    background: url("../img/background.jpg"); /*2 puntos para subir*/
+    
+    background-attachment: fixed;
+}
+#logo{
+   
+    background-color: #644cde;
+    
+}
+
+#menu ul li:hover{
+    background-color: #644cde;
+}
+
+.button-more{
+  
+ 
+    background-color: #644cde;
+   
+    
+}
