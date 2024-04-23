@@ -95,21 +95,6 @@ var controller = {
             return res.status(500).send({ message: 'Error finding the user' });
         });
     }
-    /*,
-    
-
-    delete_project:function(req,res) {
-        var projectId = req.params.id;
-        Project.findByIdAndDelete(projectId)
-        .then(projectDeleted => {
-            console.log("Deleted document:", projectDeleted);
-            return res.status(200).send({projectDeleted});
-        })
-        .catch(error => {
-            console.error("Error deleting document:", error);
-            return res.status(500).send({ message: 'Error al borrar documento' });
-        })
-    }*/
     
 };
 
