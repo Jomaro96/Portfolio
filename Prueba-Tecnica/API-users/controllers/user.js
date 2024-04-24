@@ -46,7 +46,7 @@ var controller = {
                 else {
     
                 console.log("Login successful!!:");
-                return res.status(200).send({ userFound });
+                return res.status(200).send({userFound});
                 }
             }
         }).catch(error => {

@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Signup</h2>
+
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <p>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="name" #email="ngModel" [(ngModel)]="user.email" required/>
+        <span class = 'verror' *ngIf="email.touched && !email.valid">Email is required</span>
+    </p>
+    <p>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" #username="ngModel" [(ngModel)]="user.username" required/>
+        <span class = 'verror' *ngIf="username.touched && !username.valid">Username is required</span>
+    </p>
+    
+     <p>
+        <label>Type of user:</label>
+          <input type="radio" id="C" name="type" value="C" #type="ngModel" [(ngModel)]="user.type">
+          <label for="C" class="radioLabel">Creator</label><br>
+          <input type="radio" id="R" name="type" value="R" #type="ngModel" [(ngModel)]="user.type" checked>
+          <label for="R" class="radioLabel">Reader</label>
+     </p>
+
+    <p>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" #password="ngModel" [(ngModel)]="user.password" required/>
+        <span class = 'verror' *ngIf="password.touched && !password.valid">A password is required</span>
+    </p>
+    <p>
+        <label for="cpassword">Confirm password</label>
+        <input type="password" id="cpassword" name="cpassword" #confirmPasswordInput="ngModel" [(ngModel)]="confirmPassword" required>
+        <span class="verror" *ngIf="confirmPasswordInput.touched && !confirmPasswordInput.valid">Confirmation password is required</span>
+        <span class="verror" *ngIf="confirmPasswordInput.touched && !(user.password == confirmPassword)">Passwords do not match</span>
+    </p>
+
+    <input type="submit" value="Submit" [disabled]="!userForm.form.valid"/>
+    </form>
+</div>

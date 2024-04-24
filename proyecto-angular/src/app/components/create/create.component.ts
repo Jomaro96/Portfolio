@@ -15,6 +15,7 @@ export class CreateComponent implements OnInit{
   public title:string;
   public project:Project;
   public filesToUpload: Array<File>
+  public thumbToUpload: Array<File>
 
   constructor(
     private _projectService:ProjectService,
@@ -24,6 +25,7 @@ export class CreateComponent implements OnInit{
     this.title = "Create project";
     this.project = new Project('','','','','',0,'');
     this.filesToUpload = [];
+    this.thumbToUpload = [];
   }
 
   onSubmit(form:any){

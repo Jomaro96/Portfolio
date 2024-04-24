@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>{{title}}</h2>
+
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+    <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="document.name" required/>
+        <span class = 'verror' *ngIf="name.touched && !name.valid">A name is required</span>
+    </p>
+    <p>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" #date="ngModel" [(ngModel)]="document.date" required>
+        <span class = 'verror' *ngIf="date.touched && !date.valid">A description is required</span>
+    </p>
+    <p>
+        <label>Theme</label>
+          <input type="radio" id="Math" name="theme" value="Math" #theme="ngModel" [(ngModel)]="document.theme" checked>
+          <label for="Math" class="radioLabel">Math</label><br>
+          <input type="radio" id="Science" name="theme" value="Science" #theme="ngModel" [(ngModel)]="document.theme" >
+          <label for="Science" class="radioLabel">Science</label>
+    </p>
+    <p>
+        <label>Category</label>
+          <input type="radio" id="Text" name="category" value="Text" #category="ngModel" [(ngModel)]="document.category" checked>
+          <label for="Text" class="radioLabel">Text</label><br>
+          <input type="radio" id="Image" name="category" value="Image" #category="ngModel" [(ngModel)]="document.category" >
+          <label for="Image" class="radioLabel">Image</label>
+    </p>
+    <p>
+        <label for="file">Main File</label>
+        <input type="file" id="file" name="file"  placeholder="Upload Main File" (change)="fileChangeEvent($event)"/>
+    </p>
+    <p>
+        <label for="img">Thumbnail</label>
+        <input type="file" id="thumb" name="thumb"  placeholder="Upload Thumbnail" (change)="thumbnailChangeEvent($event)"/>
+    </p>
+    <input type="submit" value="Submit" [disabled]="!projectForm.form.valid"/>
+    </form>
+</div>
+

@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Home Page</h2>
+    <ul class="ul1">
+        <li *ngFor="let theme of themes" class="themes">
+            <h3>{{ theme.name }}</h3>
+            <ul class="ul2">
+                <li *ngFor="let category of theme.categories" class="categories">
+                    <h4>{{ category }}</h4>
+                    <ul class="ul3">
+                        <li *ngFor="let document of getDocumentsForCategory(theme.name, category)" class="document">
+                            
+                            <a [routerLink]="['/content', document._id]"><img src="{{url+'get_thumbnail/'+document.thumb}}" *ngIf="document.thumb">
+                            <p>{{ document.name }}</p></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

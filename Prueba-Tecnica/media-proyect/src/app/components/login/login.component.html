@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Login</h2>
+  
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <p>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+        <span class="verror" *ngIf="loginForm.controls.email?.touched && loginForm.controls.email?.invalid">Invalid email</span>
+      </p>
+      <p>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+        <span class="verror" *ngIf="loginForm.controls.password?.touched && loginForm.controls.password?.invalid">Password is required</span>
+      </p>
+      
+      <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+    </form>
+  </div>
