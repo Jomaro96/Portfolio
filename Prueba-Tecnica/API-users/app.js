@@ -6,6 +6,9 @@ var app = express();
 
 //load routes
 var user_routes = require('./routes/user');
+var category_routes = require('./routes/category');
+var theme_routes = require('./routes/theme');
+var document_routes = require('./routes/document');
 
 //config middlewares
 app.use(bodyParser.urlencoded({extended:false})); //convierte datos de post en json
@@ -24,7 +27,9 @@ app.use((req, res, next) => {
 
 //routes
 app.use('/api',user_routes);
-
+app.use('/api',category_routes);
+app.use('/api',theme_routes);
+app.use('/api',document_routes);
 
 //export
 module.exports = app;
